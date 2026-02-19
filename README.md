@@ -31,4 +31,3 @@ Your Name
 
 ## License
 GNU GPL v3 or later
-

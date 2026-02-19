@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/cohortsync/db" VERSION="2024100304" COMMENT="XMLDB file for local_cohortsync">
+  <TABLES>
+    <TABLE NAME="local_cohortsync_config" COMMENT="Configurações de tema por coorte">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="Chave primária" />
+        <FIELD NAME="cohortid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="ID da coorte" />
+        <FIELD NAME="theme" TYPE="char" LENGTH="100" NOTNULL="false" SEQUENCE="false" COMMENT="Nome do tema (shortname)" />
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Data de criação (timestamp)" />
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Última modificação (timestamp)" />
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Chave primária" />
+        <KEY NAME="cohortid" TYPE="unique" FIELDS="cohortid" COMMENT="Cohortid único" />
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
